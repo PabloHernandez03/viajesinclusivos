@@ -161,94 +161,46 @@ const BusquedaViajes: React.FC = () => {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <div className="overflow">
-                    <select
-                        className="w-full"
-                        size={5}
-                        onChange={(e) => handleCitySelect(e.target.value)}
-                    >
-                        {selectedField === 'origin' ? (
-                        Object.entries(filteredEstadosYMunicipios).length > 0 ? (
-                            Object.entries(filteredEstadosYMunicipios).map(([estado, municipios], index) => (
-                            <optgroup key={index} label={estado} className="font-semibold text-gray-700 p-1">
-                                {municipios.map((municipio, idx) => (
-                                <option
-                                    key={idx}
-                                    value={municipio}
-                                    className="p-2 hover:bg-gray-200"
-                                >
-                                    {municipio}
-                                </option>
-                                ))}
-                            </optgroup>
-                            ))
-                        ) : (
-                            <option disabled className="p-2 text-gray-500">
-                            No se encontraron resultados
-                            </option>
-                        )
-                        ) : (
-                        filteredDestinos.length > 0 ? (
-                            filteredDestinos.map((destino, index) => (
-                            <option
-                                key={index}
-                                value={destino.nombre}
-                                className="p-3 hover:bg-gray-200"
-                            >
-                                {destino.nombre}
-                            </option>
-                            ))
-                        ) : (
-                            <option disabled className="p-2 text-gray-500">
-                            No se encontraron resultados
-                            </option>
-                        )
-                        )}
-                    </select>
-                </div>
-                {/* <select
-                    className="w-full"
-                    size={5}
-                    onChange={(e) => handleCitySelect(e.target.value)}
-                >
+                <div className="w-full max-h-60 overflow-y-auto text-left">
                     {selectedField === 'origin' ? (
                     Object.entries(filteredEstadosYMunicipios).length > 0 ? (
                         Object.entries(filteredEstadosYMunicipios).map(([estado, municipios], index) => (
-                        <optgroup key={index} label={estado} className="font-semibold text-gray-700 p-1">
+                        <div key={index} className="mb-2">
+                            <div className="font-semibold text-gray-700 p-1">{estado}</div>
                             {municipios.map((municipio, idx) => (
-                            <option
+                            <div
                                 key={idx}
-                                value={municipio}
-                                className="p-2 hover:bg-gray-200"
+                                className="p-2 hover:bg-gray-200 cursor-pointer"
+                                onClick={() => handleCitySelect(municipio)}
                             >
                                 {municipio}
-                            </option>
+                            </div>
                             ))}
-                        </optgroup>
+                        </div>
                         ))
                     ) : (
-                        <option disabled className="p-2 text-gray-500">
+                        <div className="p-2 text-gray-500">
                         No se encontraron resultados
-                        </option>
+                        </div>
                     )
                     ) : (
                     filteredDestinos.length > 0 ? (
                         filteredDestinos.map((destino, index) => (
-                        <option
+                        <div
                             key={index}
-                            value={destino.nombre}
-                            className="p-3 hover:bg-gray-200"
+                            className="p-3 hover:bg-gray-200 cursor-pointer"
+                            onClick={() => handleCitySelect(destino.nombre)}
                         >
                             {destino.nombre}
-                        </option>
+                        </div>
                         ))
                     ) : (
-                        <option disabled className="p-2 text-gray-500">
+                        <div className="p-2 text-gray-500">
                         No se encontraron resultados
-                        </option>
+                        </div>
                     )
                     )}
-                </select> */}
+                </div>
                 <button
                     className="mt-2 bg-acido text-caverna py-2 px-4 rounded"
                     onClick={closeModal}
