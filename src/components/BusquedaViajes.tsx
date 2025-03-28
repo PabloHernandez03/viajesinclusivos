@@ -152,7 +152,7 @@ const BusquedaViajes: React.FC = () => {
 
             {isModalOpen && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-20">
-                <div className="bg-white p-4 rounded w-3/4 lg:w-1/4">
+                <div className="bg-white p-4 rounded w-3/4 lg:w-1/3 xl:w-1/4">
                 <h2 className="text-xl font-bold mb-4">Selecciona una ciudad</h2>
                 <input
                     type="text"
@@ -161,7 +161,52 @@ const BusquedaViajes: React.FC = () => {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <select
+                <div className="overflow">
+                    <select
+                        className="w-full"
+                        size={5}
+                        onChange={(e) => handleCitySelect(e.target.value)}
+                    >
+                        {selectedField === 'origin' ? (
+                        Object.entries(filteredEstadosYMunicipios).length > 0 ? (
+                            Object.entries(filteredEstadosYMunicipios).map(([estado, municipios], index) => (
+                            <optgroup key={index} label={estado} className="font-semibold text-gray-700 p-1">
+                                {municipios.map((municipio, idx) => (
+                                <option
+                                    key={idx}
+                                    value={municipio}
+                                    className="p-2 hover:bg-gray-200"
+                                >
+                                    {municipio}
+                                </option>
+                                ))}
+                            </optgroup>
+                            ))
+                        ) : (
+                            <option disabled className="p-2 text-gray-500">
+                            No se encontraron resultados
+                            </option>
+                        )
+                        ) : (
+                        filteredDestinos.length > 0 ? (
+                            filteredDestinos.map((destino, index) => (
+                            <option
+                                key={index}
+                                value={destino.nombre}
+                                className="p-3 hover:bg-gray-200"
+                            >
+                                {destino.nombre}
+                            </option>
+                            ))
+                        ) : (
+                            <option disabled className="p-2 text-gray-500">
+                            No se encontraron resultados
+                            </option>
+                        )
+                        )}
+                    </select>
+                </div>
+                {/* <select
                     className="w-full"
                     size={5}
                     onChange={(e) => handleCitySelect(e.target.value)}
@@ -203,7 +248,7 @@ const BusquedaViajes: React.FC = () => {
                         </option>
                     )
                     )}
-                </select>
+                </select> */}
                 <button
                     className="mt-2 bg-acido text-caverna py-2 px-4 rounded"
                     onClick={closeModal}
