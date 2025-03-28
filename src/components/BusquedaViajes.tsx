@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import destinos from '../data/destinos.json';
 import estadosmunicipios from '../data/estadosmunicipios.json';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { faRightFromBracket, faPlus, faMinus, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 type Destino = {
     nombre: string;
@@ -144,7 +144,7 @@ const BusquedaViajes: React.FC = () => {
             </div>
             <button
                 type="submit"
-                className="w-full bg-caverna text-acido font-bold py-2 rounded hover:bg-acido hover:text-caverna"
+                className="w-full bg-caverna text-acido font-bold py-2 rounded hover:bg-acido hover:text-caverna transition duration-300 ease-in-out"
             >
                 Buscar viajes
             </button>
@@ -152,7 +152,12 @@ const BusquedaViajes: React.FC = () => {
 
             {isModalOpen && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-20">
-                <div className="bg-white p-4 rounded w-3/4 lg:w-1/3 xl:w-1/4">
+                <div className="bg-white p-4 rounded w-3/4 lg:w-1/3 xl:w-1/4 relative">
+                <FontAwesomeIcon
+                    icon={faXmark}
+                    className="absolute top-2 right-2 text-gray-500 cursor-pointer hover:text-gray-700 text-2xl"
+                    onClick={closeModal}
+                />
                 <h2 className="text-xl font-bold mb-4">Selecciona una ciudad</h2>
                 <input
                     type="text"
@@ -201,26 +206,25 @@ const BusquedaViajes: React.FC = () => {
                     )
                     )}
                 </div>
-                <button
-                    className="mt-2 bg-acido text-caverna py-2 px-4 rounded"
-                    onClick={closeModal}
-                >
-                    Cerrar
-                </button>
                 </div>
             </div>
             )}
 
             {isModalPassengersOpen && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-20">
-                <div className="bg-white p-4 rounded w-3/4 lg:w-1/4">
+                <div className="bg-white p-4 rounded w-3/4 lg:w-1/4 relative">
+                <FontAwesomeIcon
+                    icon={faXmark}
+                    className="absolute top-2 right-2 text-gray-500 cursor-pointer hover:text-gray-700 text-2xl"
+                    onClick={() => setIsModalPassengersOpen(false)}
+                />
                 <h2 className="text-xl font-bold mb-4">Cantidad de pasajeros</h2>
                 {(['adults', 'children', 'infants'] as Array<keyof typeof formData>).map((tipo, index) => (
                     <div key={index} className="flex items-center justify-between mb-4">
                     <span className="text-lg capitalize">{tipo === 'adults' ? 'Adultos' : tipo === 'children' ? 'Niños' : 'Bebés'}</span>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex">
                         <button
-                        className="bg-gray-300 text-gray-700 px-2 py-1 rounded"
+                        className="bg-white text-gray-700 px-3 py-2 rounded-s border border-slate-300 hover:border-caverna"
                         onClick={() => {
                             setFormData((prev) => ({
                             ...prev,
@@ -228,13 +232,13 @@ const BusquedaViajes: React.FC = () => {
                             }));
                         }}
                         >
-                        -
+                        <FontAwesomeIcon icon={faMinus} />
                         </button>
-                        <span className="text-lg">
+                        <span className="bg-white px-3 py-1 text-lg border-y border-slate-300">
                         {formData[tipo]}
                         </span>
                         <button
-                        className="bg-gray-300 text-gray-700 px-2 py-1 rounded"
+                        className="bg-white text-gray-700 px-3 py-2 rounded-e border border-slate-300 hover:border-caverna"
                         onClick={() => {
                             setFormData((prev) => ({
                             ...prev,
@@ -242,17 +246,11 @@ const BusquedaViajes: React.FC = () => {
                             }));
                         }}
                         >
-                        +
+                        <FontAwesomeIcon icon={faPlus} />
                         </button>
                     </div>
                     </div>
                 ))}
-                <button
-                    className="mt-2 bg-acido text-caverna py-2 px-4 rounded"
-                    onClick={() => setIsModalPassengersOpen(false)}
-                >
-                    Cerrar
-                </button>
                 </div>
             </div>
             )}
