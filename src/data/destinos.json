@@ -1,0 +1,72 @@
+[
+    {
+        "nombre": "Chichén Itzá",
+        "ubicación": "Yucatán",
+        "descripción": "Una de las nuevas siete maravillas del mundo, famosa por su pirámide de Kukulkán.",
+        "categoría": "Arqueológico",
+        "coordenadas": {
+            "latitud": 20.6843,
+            "longitud": -88.5678
+        }
+    },
+    {
+        "nombre": "Cenotes de Valladolid",
+        "ubicación": "Yucatán",
+        "descripción": "Impresionantes pozos naturales de agua cristalina ideales para nadar.",
+        "categoría": "Naturaleza",
+        "coordenadas": {
+            "latitud": 20.6892,
+            "longitud": -88.2012
+        }
+    },
+    {
+        "nombre": "Teotihuacán",
+        "ubicación": "Estado de México",
+        "descripción": "Zona arqueológica con las famosas pirámides del Sol y la Luna.",
+        "categoría": "Arqueológico",
+        "coordenadas": {
+            "latitud": 19.6925,
+            "longitud": -98.8438
+        }
+    },
+    {
+        "nombre": "Playa del Carmen",
+        "ubicación": "Quintana Roo",
+        "descripción": "Destino turístico con playas paradisíacas y vida nocturna vibrante.",
+        "categoría": "Playa",
+        "coordenadas": {
+            "latitud": 20.6296,
+            "longitud": -87.0739
+        }
+    },
+    {
+        "nombre": "Barrancas del Cobre",
+        "ubicación": "Chihuahua",
+        "descripción": "Sistema de cañones más grande que el Gran Cañón, ideal para ecoturismo.",
+        "categoría": "Naturaleza",
+        "coordenadas": {
+            "latitud": 27.5269,
+            "longitud": -107.7570
+        }
+    },
+    {
+        "nombre": "Guanajuato",
+        "ubicación": "Guanajuato",
+        "descripción": "Ciudad colonial famosa por sus callejones, túneles y el Festival Cervantino.",
+        "categoría": "Cultural",
+        "coordenadas": {
+            "latitud": 21.0190,
+            "longitud": -101.2574
+        }
+    },
+    {
+        "nombre": "Tulum",
+        "ubicación": "Quintana Roo",
+        "descripción": "Ruinas mayas frente al mar Caribe, rodeadas de playas de arena blanca.",
+        "categoría": "Arqueológico",
+        "coordenadas": {
+            "latitud": 20.2110,
+            "longitud": -87.4653
+        }
+    }
+]
