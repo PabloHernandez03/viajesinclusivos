@@ -7,17 +7,17 @@ export default function NavMenu() {
                 to="/"
                 className={({ isActive }) =>
                     `hover:text-acido p-2 px-3 ${
-                        isActive ? 'text-acido border-b-2 font-bold border-[#FFD801]' : 'text-caverna'
+                        isActive ? 'text-acido border-b-2 font-bold border-[#FFD801]' : 'text-caverna font-bold'
                     }`
                 }
             >
                 Inicio
             </NavLink>
-            {/* <NavLink
+            <NavLink
                 to="/destinos-accesibles"
                 className={({ isActive }) =>
                     `hover:text-acido p-2 px-3 ${
-                        isActive ? 'text-acido border-b-2 font-bold border-[#FFD801]' : 'text-caverna'
+                        isActive ? 'text-acido border-b-2 font-bold border-[#FFD801]' : 'text-caverna font-bold'
                     }`
                 }
             >
@@ -27,7 +27,7 @@ export default function NavMenu() {
                 to="/actividades-inclusivas"
                 className={({ isActive }) =>
                     `hover:text-acido p-2 px-3 ${
-                        isActive ? 'text-acido border-b-2 font-bold border-[#FFD801]' : 'text-caverna'
+                        isActive ? 'text-acido border-b-2 font-bold border-[#FFD801]' : 'text-caverna font-bold'
                     }`
                 }
             >
@@ -37,7 +37,7 @@ export default function NavMenu() {
                 to="/recursos-adaptados"
                 className={({ isActive }) =>
                     `hover:text-acido p-2 px-3 ${
-                        isActive ? 'text-acido border-b-2 font-bold border-[#FFD801]' : 'text-caverna'
+                        isActive ? 'text-acido border-b-2 font-bold border-[#FFD801]' : 'text-caverna font-bold'
                     }`
                 }
             >
@@ -47,7 +47,7 @@ export default function NavMenu() {
                 to="/consejos-viaje"
                 className={({ isActive }) =>
                     `hover:text-acido p-2 px-3 ${
-                        isActive ? 'text-acido border-b-2 font-bold border-[#FFD801]' : 'text-caverna'
+                        isActive ? 'text-acido border-b-2 font-bold border-[#FFD801]' : 'text-caverna font-bold'
                     }`
                 }
             >
@@ -57,7 +57,7 @@ export default function NavMenu() {
                 to="/testimonios"
                 className={({ isActive }) =>
                     `hover:text-acido p-2 px-3 ${
-                        isActive ? 'text-acido border-b-2 font-bold border-[#FFD801]' : 'text-caverna'
+                        isActive ? 'text-acido border-b-2 font-bold border-[#FFD801]' : 'text-caverna font-bold'
                     }`
                 }
             >
@@ -67,12 +67,12 @@ export default function NavMenu() {
                 to="/contacto"
                 className={({ isActive }) =>
                     `hover:text-acido p-2 px-3 ${
-                        isActive ? 'text-acido border-b-2 font-bold border-[#FFD801]' : 'text-caverna'
+                        isActive ? 'text-acido border-b-2 font-bold border-[#FFD801]' : 'text-caverna font-bold'
                     }`
                 }
             >
                 Contacto
-            </NavLink> */}
+            </NavLink>
         </nav>
     );
 }

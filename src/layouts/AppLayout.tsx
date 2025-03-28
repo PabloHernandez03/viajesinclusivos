@@ -2,8 +2,7 @@ import NavMenu from '@/components/NavMenu';
 import Logo from "@/components/Logo";
 import { Outlet } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faYoutube, faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faYoutube, faXTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import logo from "/inclusionconequidad.png";
 import { NavLink } from 'react-router-dom';
 
@@ -12,7 +11,11 @@ export default function AppLayout() {
   return (
     <>
       <header className="bg-white shadow-md">
-        <div className="max-w-screen-2xl mx-6 md:mx-24 flex justify-between md:flex-row pt-3 gap-4">
+        <div className="mx-auto max-w-screen-lg lg:max-w-screen-md md:max-w-screen-sm flex justify-between md:flex-row pt-3 gap-4"
+          style={{
+            maxWidth: '90%',
+          }}
+        >
           <Logo />
           <NavLink
             to="https://inclusionconequidad.netlify.app/"
@@ -24,30 +27,38 @@ export default function AppLayout() {
             </div>
           </NavLink>
         </div>
-        <div className="max-w-screen-2xl mx-6 md:mx-24 flex flex-col md:flex-row pt-3 gap-4">
+        <div className="mx-auto max-w-screen-lg lg:max-w-screen-md md:max-w-screen-sm flex flex-col md:flex-row pt-3 gap-4"
+          style={{
+            maxWidth: '90%',
+          }}
+        >
           <NavMenu />
         </div>
       </header>
 
       <section
-          className="max-w-screen-2xl mx-6 md:mx-24"
+          className="mx-auto max-w-screen-lg lg:max-w-screen-md md:max-w-screen-sm"
+          style={{
+            maxWidth: '90%',
+          }}
       >
           <Outlet />
       </section>
 
       <footer className="py-2 bg-caverna border-t border-caverna">
         <div className="flex flex-col flex-wrap justify-center items-center m-4 md:flex-row gap-2 md:gap-0 md:justify-center">
-          <a href="https://www.facebook.com/inclusionconequidadac/" target="_blank" className="mx-2 text-white flex gap-4 items-center hover:text-acido">
+          <a href="https://www.facebook.com/inclusionconequidadac/" target="_blank" className="mx-2 text-white flex gap-4 items-center hover:text-acido transition-colors duration-300">
             <FontAwesomeIcon icon={faFacebook} size="2x" /> Inclusión con equidad A. C.
           </a>
-          <a href="https://www.youtube.com/channel/UCBL7NBoFff31WfRIf3IVGYg" target="_blank" className="mx-2 text-white flex gap-4 items-center hover:text-acido">
+          <a href="https://www.youtube.com/channel/UCBL7NBoFff31WfRIf3IVGYg" target="_blank" className="mx-2 text-white flex gap-4 items-center hover:text-acido transition-colors duration-300">
             <FontAwesomeIcon icon={faYoutube} size="2x" /> Inclusión con Equidad Asociación Civil
           </a>
-          <a href="https://x.com/InclusionEquida" target="_blank" className="mx-2 text-white flex gap-4 items-center hover:text-acido">
-            <FontAwesomeIcon icon={faXTwitter} size="2x" /> Inclusión con Equidad
+          <a href="https://x.com/InclusionEquida" target="_blank" className="mx-2 text-white flex gap-4 items-center hover:text-acido transition-colors duration-300">
+            <FontAwesomeIcon icon={faXTwitter} size="2x" /> inclusión con equidad AC
           </a>
-          <a href="tel: // 5543597236" target="_blank" className="mx-2 text-white flex gap-4 items-center hover:text-acido">
-            <FontAwesomeIcon icon={faPhone} size="2x" /> 55-4359-7236
+          <a href="https://www.instagram.com/inclusionconequidadac/" target="_blank" className="mx-2 text-white flex gap-4 items-center hover:text-acido transition-colors duration-300">
+            <FontAwesomeIcon icon={faInstagram} size="2x" /> inclusionconequidadac
+
           </a>
         </div>
         <div className="mt-4 text-center text-white mx-8 md:mx-16">
