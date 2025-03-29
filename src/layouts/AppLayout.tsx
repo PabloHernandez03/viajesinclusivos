@@ -11,10 +11,10 @@ export default function AppLayout() {
   return (
     <>
       <header className="bg-white shadow-md">
-        <div className="mx-auto max-w-screen-lg lg:max-w-screen-md md:max-w-screen-sm flex justify-between md:flex-row pt-3 gap-4"
-          style={{
-            maxWidth: '90%',
-          }}
+        <div className="mx-6 md:mx-auto max-w-[480px] lg:max-w-screen-md xl:max-w-screen-lg md:max-w-screen-sm flex justify-between md:flex-row pt-3 gap-4"
+          // style={{
+          //   maxWidth: '90%',
+          // }}
         >
           <Logo />
           <NavLink
@@ -27,20 +27,20 @@ export default function AppLayout() {
             </div>
           </NavLink>
         </div>
-        <div className="mx-auto max-w-screen-lg lg:max-w-screen-md md:max-w-screen-sm flex flex-col md:flex-row pt-3 gap-4"
-          style={{
-            maxWidth: '90%',
-          }}
+        <div className="mx-6 md:mx-auto max-w-[480px] lg:max-w-screen-md xl:max-w-screen-lg md:max-w-screen-sm flex flex-col md:flex-row pt-3 gap-4"
+          // style={{
+          //   maxWidth: '90%',
+          // }}
         >
           <NavMenu />
         </div>
       </header>
 
       <section
-          className="mx-auto max-w-screen-lg lg:max-w-screen-md md:max-w-screen-sm"
-          style={{
-            maxWidth: '90%',
-          }}
+          className="mx-6 sm:mx-auto max-w-[480px] lg:max-w-screen-md xl:max-w-screen-lg md:max-w-screen-sm"
+          // style={{
+          //   maxWidth: '90%',
+          // }}
       >
           <Outlet />
       </section>
@@ -61,7 +61,7 @@ export default function AppLayout() {
 
           </a>
         </div>
-        <div className="mt-4 text-center text-white mx-8 md:mx-16">
+        <div className="mt-4 text-center text-white mx-6 md:mx-16">
           <h2 className="text-lg font-bold">Aviso de Privacidad</h2>
           <p className="text-sm"><strong>Inclusión con Equidad Asociación Civil</strong>, mejor conocido como <strong>Inclusión con Equidad A.C.</strong>, con domicilio en <strong>Calle Contadores 34, colonia Nueva Rosita, Iztapalapa, C.P. 09420, Ciudad de México, México</strong>, y portal de internet <strong>www.inclusionconequidad.org.mx</strong>, es el responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:</p>
           <p className="text-sm mt-4 font-bold">¿Para qué fines utilizamos sus datos personales?</p>

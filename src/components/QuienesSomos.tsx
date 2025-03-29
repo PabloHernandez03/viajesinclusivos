@@ -28,44 +28,44 @@ const QuienesSomos: React.FC = () => {
                     </p>
                 </div>
             </div>
-            <div className="mt-6 p-6">
+            <div className="mt-6 p-2 sm:p-6">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="bg-acido hover:bg-caverna text-black hover:text-acido lg:mx-10 py-16 shadow-lg text-xl transition-colors duration-300 relative group">
+                <div className="bg-acido hover:bg-caverna text-black hover:text-acido lg:mx-8 py-16 shadow-lg text-xl transition-colors duration-300 relative group">
                     <p className="text-center font-medium">Inclusión</p>
                     <span className="absolute bottom-0 left-0 w-0 h-1 bg-acido transition-all duration-500 group-hover:w-full"></span>
                     <span className="absolute top-0 left-0 w-0 h-1 bg-acido transition-all duration-500 group-hover:w-full"></span>
                     <span className="absolute top-0 left-0 h-0 w-1 bg-acido transition-all duration-500 group-hover:h-full"></span>
                     <span className="absolute top-0 right-0 h-0 w-1 bg-acido transition-all duration-500 group-hover:h-full"></span>
                 </div>
-                <div className="text-black lg:mx-10 py-16 text-3xl hover:shadow-lg transition-shadow duration-300 relative group">
+                <div className="text-black lg:mx-8 py-16 text-3xl hover:shadow-lg transition-shadow duration-300 relative group">
                     <p className="text-center font-medium">Valores</p>
                     <span className="absolute bottom-0 left-0 w-0 h-1 bg-black transition-all duration-500 group-hover:w-full"></span>
                     <span className="absolute top-0 left-0 w-0 h-1 bg-black transition-all duration-500 group-hover:w-full"></span>
                     <span className="absolute top-0 left-0 h-0 w-1 bg-black transition-all duration-500 group-hover:h-full"></span>
                     <span className="absolute top-0 right-0 h-0 w-1 bg-black transition-all duration-500 group-hover:h-full"></span>
                 </div>
-                <div className="bg-acido hover:bg-caverna text-black hover:text-acido lg:mx-10 py-16 shadow-lg text-xl transition-colors duration-300 relative group">
+                <div className="bg-acido hover:bg-caverna text-black hover:text-acido lg:mx-8 py-16 shadow-lg text-xl transition-colors duration-300 relative group">
                     <p className="text-center font-medium">Respeto</p>
                     <span className="absolute bottom-0 left-0 w-0 h-1 bg-acido transition-all duration-500 group-hover:w-full"></span>
                     <span className="absolute top-0 left-0 w-0 h-1 bg-acido transition-all duration-500 group-hover:w-full"></span>
                     <span className="absolute top-0 left-0 h-0 w-1 bg-acido transition-all duration-500 group-hover:h-full"></span>
                     <span className="absolute top-0 right-0 h-0 w-1 bg-acido transition-all duration-500 group-hover:h-full"></span>
                 </div>
-                <div className="bg-acido hover:bg-caverna text-black hover:text-acido lg:mx-10 py-16 shadow-lg text-xl transition-colors duration-300 relative group">
+                <div className="bg-acido hover:bg-caverna text-black hover:text-acido lg:mx-8 py-16 shadow-lg text-xl transition-colors duration-300 relative group">
                     <p className="text-center font-medium">Empatía</p>
                     <span className="absolute bottom-0 left-0 w-0 h-1 bg-acido transition-all duration-500 group-hover:w-full"></span>
                     <span className="absolute top-0 left-0 w-0 h-1 bg-acido transition-all duration-500 group-hover:w-full"></span>
                     <span className="absolute top-0 left-0 h-0 w-1 bg-acido transition-all duration-500 group-hover:h-full"></span>
                     <span className="absolute top-0 right-0 h-0 w-1 bg-acido transition-all duration-500 group-hover:h-full"></span>
                 </div>
-                <div className="bg-acido hover:bg-caverna text-black hover:text-acido lg:mx-10 py-16 shadow-lg text-xl transition-colors duration-300 relative group">
+                <div className="bg-acido hover:bg-caverna text-black hover:text-acido lg:mx-8 py-16 shadow-lg text-xl transition-colors duration-300 relative group">
                     <p className="text-center font-medium">Accesibilidad</p>
                     <span className="absolute bottom-0 left-0 w-0 h-1 bg-acido transition-all duration-500 group-hover:w-full"></span>
                     <span className="absolute top-0 left-0 w-0 h-1 bg-acido transition-all duration-500 group-hover:w-full"></span>
                     <span className="absolute top-0 left-0 h-0 w-1 bg-acido transition-all duration-500 group-hover:h-full"></span>
                     <span className="absolute top-0 right-0 h-0 w-1 bg-acido transition-all duration-500 group-hover:h-full"></span>
                 </div>
-                <div className="bg-acido hover:bg-caverna text-black hover:text-acido lg:mx-10 py-16 shadow-lg text-xl transition-colors duration-300 relative group">
+                <div className="bg-acido hover:bg-caverna text-black hover:text-acido lg:mx-8 py-16 shadow-lg text-xl transition-colors duration-300 relative group">
                     <p className="text-center font-medium">Diversidad</p>
                     <span className="absolute bottom-0 left-0 w-0 h-1 bg-acido transition-all duration-500 group-hover:w-full"></span>
                     <span className="absolute top-0 left-0 w-0 h-1 bg-acido transition-all duration-500 group-hover:w-full"></span>
